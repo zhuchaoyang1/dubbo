@@ -84,7 +84,7 @@ dubbo （远程服务调用的分布式框架）主要实现应用与zokeeper等
 <!-- provider1 -->
 <dubbo:application name="demo-provider2" owner="zcy-provider2" organization="dubbox"/>
 ```
-如果如上配置，那么就会报警告：多个不同应用注册了相同服务，那么为什么会这样呢？因为相同服务，使用一个name就可以完美的使用负载均衡了，也就是说负载均衡是基于相同实例名称的，这一点和基于Eurka负载均衡感觉是一样的。
+如果如上配置，那么就会报警告：多个不同应用注册了相同服务，那么为什么会这样呢？因为相同服务，使用一个name就可以完美的使用负载均衡了，也就是说负载均衡是基于相同实例名称的，这一点和基于Eurka负载均衡感觉是一样的（当然了，Eurka和Dubbo也不是一个层级的东西，Eruka是Zookeeper的替代品）。
 
 - Zookeeper、Provider、Dubbo控制台启动要有一定的次序，否则Zookeeper会挂掉（原因暂时还不知道）
 先启动Zookeeper其次要注册至少一个Provider最后再启动Dubbo就不会报错了。

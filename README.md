@@ -27,6 +27,9 @@ zookeeper作为dubbo的服务注册与发现中心
 
 ```java
 mvn clean package xxx
+// 打包之后如果是Jar包则使用如下命令执行：
+java -jar xxx.jar
+// 打包之后如果是war包则放入Tomcat/webapps即可
 ```
 
 ![image](https://github.com/zhuchaoyang1/dubbo/tree/master/readme/img/dubbo控制台.jpg)
@@ -81,5 +84,7 @@ dubbo （远程服务调用的分布式框架）主要实现应用与zokeeper等
 <!-- provider1 -->
 <dubbo:application name="demo-provider2" owner="zcy-provider2" organization="dubbox"/>
 ```
-
 如果如上配置，那么就会报警告：多个不同应用注册了相同服务
+
+- Zookeeper、Provider、Dubbo控制台启动要有一定的次序，否则Zookeeper会挂掉（原因暂时还不知道）
+先启动Zookeeper其次要注册至少一个Provider最后再启动Dubbo就不会报错了。

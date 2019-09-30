@@ -15,7 +15,7 @@ Dubbo GitHub链接：https://github.com/apache/dubbo
 
 ## Dubbo工作流程
 
-![image](img\architecture.png)
+![image](https://github.com/zhuchaoyang1/dubbo/tree/master/readme/img/architecture.png)
 
 ## 所需要的支持
 
@@ -29,7 +29,7 @@ zookeeper作为dubbo的服务注册与发现中心
 mvn clean package xxx
 ```
 
-![image](img\dubbo控制台.jpg)
+![image](https://github.com/zhuchaoyang1/dubbo/tree/master/readme/img/dubbo控制台.jpg)
 
 ## Dubbo的几种集群负载均衡策略
 
@@ -47,7 +47,7 @@ mvn clean package xxx
 
 首先需要说明：Dubbo和Zookeeper是不一样的东西：
 Dubbo官方推荐使用Zookeeper作为注册中心
-![image](img\zook.jpg)
+![image](https://github.com/zhuchaoyang1/dubbo/tree/master/readme/img/zook.jpg)
 
 ### Zookeeper （注册中心）
 
